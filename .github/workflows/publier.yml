@@ -10,6 +10,10 @@ on:
         description: Dry run, show the Discord message without publishing anything
         type: boolean
         default: true
+      reposter:
+        description: Post an existing release to Discord again (its tag, e.g. 2026-11-25)
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -32,3 +36,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           ESSAI: ${{ inputs.essai }}
+          REPOSTER: ${{ inputs.reposter }}

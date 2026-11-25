@@ -83,7 +83,13 @@ async function poster(u, url) {
 const nouveaux = chrono.map(x => x.u).filter(u => !existe(u.tag));
 console.log('versions sans release : ' + (nouveaux.map(u => u.tag).join(', ') || 'aucune'));
 
-if (essai) {
+const reposter = (process.env.REPOSTER || '').trim();
+if (reposter) {
+  const u = chrono.map(x => x.u).find(x => x.tag === reposter);
+  if (!u) throw new Error('aucune entree avec le tag ' + reposter);
+  if (!existe(u.tag)) throw new Error('pas de release ' + reposter + ', la publier normalement');
+  await poster(u, 'https://github.com/' + depot + '/releases/tag/' + u.tag);
+} else if (essai) {
   const dernier = chrono[chrono.length - 1].u;
   await poster(dernier, 'https://github.com/' + depot + '/releases/tag/' + dernier.tag);
 } else {
