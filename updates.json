@@ -5,6 +5,12 @@
   },
   "updates": [
     {
+      "tag": "2026-11-25",
+      "date": "2026-11-25",
+      "title": "Skrl Housing has its own page",
+      "body": "Skrl Housing, the decoration script I'm building around my props, now has its own page on skrl3d.com.\n\n**What's new**\n- [skrl3d.com/skrl-housing](https://skrl3d.com/skrl-housing) shows the script in game: the decoration mode with the Velour props, the agent tablet, what it does and every update so far\n- The Scripts page links to it\n- Release notes are on GitHub now, for the site and the packs (this page) and for Skrl Housing ([skrillmods-star/skrl-housing](https://github.com/skrillmods-star/skrl-housing/releases))\n- New versions of Skrl Housing show up on the page and in the skrl-housing channel on their own\n\n**What to do**\nNothing for now, Skrl Housing isn't for sale yet. Follow the skrl-housing channel to see what's coming."
+    },
+    {
       "tag": "2026-11-24",
       "date": "2026-11-24",
       "title": "Gift cards are on skrl3d.com",
