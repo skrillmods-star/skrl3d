@@ -72,7 +72,8 @@ function carte(u, url) {
       author: { name: proprio, url: 'https://github.com/' + proprio, icon_url: 'https://github.com/' + proprio + '.png' },
       title: ('[' + nom + '] ' + nomRelease(u)).slice(0, 256),
       url,
-      description: corps(u).slice(0, 4096)
+      description: corps(u).slice(0, 4096),
+      ...(cfg.color ? { color: parseInt(String(cfg.color).replace('#', ''), 16) } : {})
     }]
   };
 }
