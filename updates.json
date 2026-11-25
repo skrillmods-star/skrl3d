@@ -1,7 +1,8 @@
 {
   "discord": {
     "heading": "# Update: {title} {ping}",
-    "release": "Update: {title}"
+    "release": "Update: {title}",
+    "style": "github"
   },
   "updates": [
     {

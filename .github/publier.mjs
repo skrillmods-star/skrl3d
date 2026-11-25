@@ -62,7 +62,30 @@ function decouper(texte) {
   return morceaux.flatMap(x => x.length <= 1990 ? [x] : x.match(/[\s\S]{1,1990}/g));
 }
 
+function carte(u, url) {
+  const [proprio, nom] = depot.split('/');
+  return {
+    username: 'GitHub',
+    avatar_url: 'https://avatars.githubusercontent.com/u/9919?s=200&v=4',
+    allowed_mentions: { parse: [] },
+    embeds: [{
+      author: { name: proprio, url: 'https://github.com/' + proprio, icon_url: 'https://github.com/' + proprio + '.png' },
+      title: ('[' + nom + '] ' + nomRelease(u)).slice(0, 256),
+      url,
+      description: corps(u).slice(0, 4096)
+    }]
+  };
+}
+
 async function poster(u, url) {
+  if (cfg.style === 'github') {
+    const charge = carte(u, url);
+    if (essai || !webhook) { console.log('--- carte ' + u.tag + ' (essai) ---\n' + JSON.stringify(charge, null, 2)); return; }
+    const r = await fetch(webhook + '?wait=true', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(charge) });
+    if (!r.ok) throw new Error('Discord ' + r.status + ' ' + (await r.text()).slice(0, 300));
+    console.log('poste sur Discord : ' + u.tag);
+    return;
+  }
   const { texte, m } = message(u, url);
   const parts = decouper(texte);
   if (essai || !webhook) {
