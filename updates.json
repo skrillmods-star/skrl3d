@@ -1,0 +1,63 @@
+{
+  "discord": {
+    "heading": "# Update: {title} {ping}",
+    "release": "Update: {title}"
+  },
+  "updates": [
+    {
+      "tag": "2026-11-24",
+      "date": "2026-11-24",
+      "title": "Gift cards are on skrl3d.com",
+      "body": "You can now send someone a Skrl 3D gift card and let them pick what they want.\n\n**What's new**\n- Gift cards are on https://skrl3d.com/giftcards in three amounts. Tebex emails you the code after payment\n- The code works on packs and on the Subscription. Enter it in your cart, under \"Have a gift card?\"\n- Gift cards has its own link in the menu at the top of every page\n- Velour is now the pack on the home page\n\n**Fixes**\n- The gift card field in the cart refused codes with spaces in them. It takes them now, the way Tebex writes them\n- The Subscription page now explains how new packs arrive: they come inside Skrl_next, so you download it again from portal.cfx.re after each release\n\n**What to do**\nSubscribers: download Skrl_next again from portal.cfx.re to get Velour. Everything else is live."
+    },
+    {
+      "tag": "2026-11-16-2",
+      "date": "2026-11-16",
+      "title": "Packs V1, V2 and V3 are much lighter",
+      "body": "I reworked the first three packs so the props load faster in game and in housing scripts. Same look, same prop names.\n\n**What changed**\n- 240 MB of leftover texture files that every player downloaded for nothing are gone from V1 and V2\n- Housing scripts like rcore now detect the props without the \"Timeout\" error\n\n**Fixes**\n- The V2 living room baskets, the furniture bowl and the breakfast tray had no collision, so rcore marked them as \"No collision\". They have one now\n\n**What to do**\nDownload the new versions from portal.cfx.re (skrill_by_atr_v2 for V1 and V2, skrill_pack_three for V3), replace the old folders, then restart your server. Your furniture files don't change."
+    },
+    {
+      "tag": "2026-11-16",
+      "date": "2026-11-16",
+      "title": "Pack V5 is much lighter",
+      "body": "I reworked Pack V5 so the props load faster in game and in housing scripts. Same look, same prop names.\n\n**What changed**\n- 678 MB of leftover texture files that every player downloaded for nothing are gone\n- Housing scripts like rcore now detect the props without the \"Timeout\" error\n\n**Fixes**\n- The Colors rugs and the Fluffy plush had no collision, so rcore marked them as \"No collision\". They have one now\n- The Nautical and Colors table lamps give off real light at night instead of a faint glow\n\n**What to do**\nDownload version 1.0.2 from portal.cfx.re, replace the old skrill_pack_five folder, then restart your server. Your furniture files don't change."
+    },
+    {
+      "tag": "2026-11-12",
+      "date": "2026-11-12",
+      "title": "Buy as a gift, prop search and bundle tips on skrl3d.com",
+      "body": "I just pushed a round of changes to skrl3d.com. You can now gift a pack to a friend, and finding the right pack takes fewer clicks.\n### What changed\n- Every paid pack has a \"Buy as a gift\" button under Add to cart. Type their Cfx.re name: the site finds the account and shows its picture so you can check it's the right person. The pack lands in their portal.cfx.re, not yours.\n- Search by prop: type \"pumpkin\" in the search bar and you get every pack that has one.\n- Each prop in \"What's inside\" now has its name under the picture.\n- The shop lists the newest packs first, and there's a Free filter.\n- Each pack page tells you which bundle already includes it and how much you save compared with buying the packs one by one.\n- Your cart tells you when a bundle costs less than the packs you picked and swaps them for it in one click. It also flags a pack that is already inside a bundle in your cart.\n### Fixes\n- The cart said VAT was included. Tebex adds sales tax or VAT at checkout depending on your country, and the cart now says so.\n- Pack covers in the cart suggestions no longer have white borders.\n### What to do\nNothing, it's all live. One thing to know about gifts: Tebex ignores a gift sent to your own Cfx.re account."
+    },
+    {
+      "tag": "2026-11-02",
+      "date": "2026-11-02",
+      "title": "Lighter Feast and Autumn, RTX Housing fix",
+      "body": "The Feast and Autumn packs are now much lighter, so the props load faster in game and in housing scripts. Same look, same prop names.\n## What changed\n- Feast: 34 MB down to 12 MB (simplified models and collisions)\n- Autumn: 52 MB down to 36 MB (optimized textures)\n- Subscription (skrl_next) updated to version 1.0.4 with both lighter packs\n- Housing scripts like rcore now detect the Feast props correctly\n## Fixes\n- RTX Housing: the furniture files now include the price of every prop, so buying furniture from the housing menu works again\n- RTX Housing: all my packs now go in one \"Skrl 3D\" category, paste the file at the very end of configs/furniture.lua\n- The RTX export from the pack galleries uses the same fixed format\n## What to do\nDownload the new versions from portal.cfx.re and replace the old folders, then restart your server. If you use RTX Housing, download the furniture file again on skrl3d.com and replace the lines from the old one."
+    },
+    {
+      "tag": "2026-10-16",
+      "date": "2026-10-16",
+      "title": "New homepage and Clothing",
+      "body": "[skrl3d.com](https://skrl3d.com/) has a new homepage. Pick what you are building: Props, Scripts or Clothing. The furniture store is still there, one click away.\n## What changed\n• New homepage on skrl3d.com with three sections: Props, Scripts (coming soon) and Clothing\n• The props store moved to skrl3d.com/accueil. Old links still work and the Skrl 3D logo always brings you back to the homepage\n• New Clothing section, starting with Realistic Eyes: sharper irises and a direct download from the site\n• Partners now have their own pages with their products, videos, store and Discord\n• New look across the whole site, Halloween visual and bats still here for October\n• Mobile menu organized by section: open Props for the categories, Clothing for the clothing items\n• Search bar now fits on laptop screens, breadcrumbs show where you are (Skrl 3D > Props > Living)\n## Fixes\n• Pages no longer break on phones when a pack is waiting in your cart\n• \"Download all images\" button now fits on phones\n• Customer pictures in Recent payments load reliably\n\nNo action needed on your end. If you used the old Realistic Eyes from [GitHub](https://github.com/prexicylia/skrill_realistic_eyes), grab the new download on [skrl3d.com/realistic-eyes.](https://skrl3d.com/realistic-eyes)"
+    },
+    {
+      "tag": "2026-09-14",
+      "date": "2026-09-14",
+      "title": "Image downloads fixed",
+      "body": "The \"Download PNGs\" button was failing on the free Japan pack and the\nNitro Booster packs when used from your profile page, returning an error\nfile instead of the images.\n## What changed\n• Image downloads now work from every page: profile, category pages and\n  product pages\n• The ZIP contains real PNG files, ready for your housing menu or inventory\n• Applies to the Japan pack and all four Nitro Booster packs\n\nNo action needed on your end. If you got a \"pngs.json\" file recently, just\ndownload again."
+    },
+    {
+      "tag": "2026-07-09",
+      "date": "2026-07-09",
+      "title": "Site Optimization",
+      "body": "skrl3d.com has been optimized for faster loading, especially on a first visit.\n## What changed\n• 3D previews are now up to 10x lighter, with no loss in quality\n• All pack gallery images optimized to WebP (~8x smaller)\n• Smoother browsing across the whole site\n\nNo action needed on your end. Packs and props now load almost instantly instead of taking several seconds."
+    },
+    {
+      "tag": "2026-07-02",
+      "date": "2026-07-02",
+      "title": "Rich Style V2",
+      "ping": "1095375867598880979",
+      "body": "A new update for Rich Style V2 is now available, adding 2 new props to the pack at no additional cost.\n## New props\n• Gaming Chair: `skrill_r_richstyle_gaming_chair`\n• Desk Chair: `skrill_r_richstyle_desk_chair`\n## How to update\n1. Open your CFX portal: https://portal.cfx.re\n2. Go to Granted Assets and re-download Rich Style V2.\n3. Replace the pack files in your resource with the updated version.\n4. Add the two new models to your housing / furniture configuration using the names above."
+    }
+  ]
+}
